@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+public class TimerForMap3 : MonoBehaviour
 {
     public GameObject objectToHide; // كائن للإخفاء عند الصفر
     public GameObject objectToShow; // كائن للإظهار عند الصفر
