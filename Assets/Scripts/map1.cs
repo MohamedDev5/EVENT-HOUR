@@ -8,10 +8,15 @@ public class map1 : MonoBehaviour
 {
     [SerializeField] Camera cameraP;
     [SerializeField] GameObject UiPause;
-    private float CodeWin = 3001;
+    private string CodeWin = "3001";
     [SerializeField] GameObject UiNum1, UiNum2, UiNum3, UiNum4;
     [SerializeField] GameObject UiInput;
+    [SerializeField] InputField inputplaye;
 
+    private void Start()
+    {
+        inputplaye.onEndEdit.AddListener(delegate { Checknumber(inputplaye); });
+    }
     void FixedUpdate()
     {
         Ray ray = cameraP.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
@@ -58,15 +63,6 @@ public class map1 : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 UiInput.SetActive(true);
             }
-
-            while (UiInput.activeInHierarchy == true)
-            {
-                if (Input.GetKeyDown(KeyCode.Return))
-                {
-                    UiInput.SetActive(false);
-                    
-                }
-            }
         }
         //pause Menu
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -91,5 +87,25 @@ public class map1 : MonoBehaviour
     public void LoadMenu(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    public void Checknumber(InputField input)
+    {
+        if (input.text == CodeWin)
+        {
+            //ﬂÊœ «·«‰ ’«— Â‰«
+            Debug.Log("win");
+        }
+        else if (input.text != CodeWin)
+        {
+            //ﬂÊœ «·Œ”«—… Â‰«
+            Debug.Log("lose");
+        }
+    }
+    public void GetBackToGame()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        UiInput.SetActive(false);
     }
 }
