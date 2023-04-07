@@ -64,8 +64,7 @@ public class map1 : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
                     UiInput.SetActive(false);
-                    Cursor.visible = false;
-                    Cursor.lockState = CursorLockMode.Locked;
+                    
                 }
             }
         }
