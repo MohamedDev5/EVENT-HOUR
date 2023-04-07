@@ -18,6 +18,8 @@ public class RayHitOpen : MonoBehaviour
     //Ui
     [SerializeField] GameObject UiToOpen, UiLoadingMap1, UiLoadingMap2, UiLoadingMap3;
     [SerializeField] Slider proMap1, proMap2, proMap3;
+    [SerializeField] GameObject UiPause;
+    [SerializeField] Button resuemBtn, mainMenuBtn, exitBtn;
     //The Time Portal
     [SerializeField] GameObject Portal;
     //Maps
@@ -207,6 +209,25 @@ public class RayHitOpen : MonoBehaviour
             lineRenderer.enabled = false;
             //Debug.Log("no hit");
         }
+        //pause Menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UiPause.SetActive(true);
+            Time.timeScale = 0;
+        }
 
+    }
+    public void ResumGame()
+    {
+        UiPause.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    public void LoadMenu(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
