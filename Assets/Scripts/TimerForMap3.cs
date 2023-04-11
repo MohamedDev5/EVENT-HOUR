@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerForMap3 : MonoBehaviour
@@ -48,5 +49,9 @@ public class TimerForMap3 : MonoBehaviour
     {
         timeLeft = 0f; // إنزال العد التنازلي عند الضغط على الزر
         stopButtonPressed = true; // تحديث متغير الضغط على الزر
+    }
+    public void LoadMenu(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

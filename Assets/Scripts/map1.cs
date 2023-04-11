@@ -12,16 +12,19 @@ public class map1 : MonoBehaviour
     [SerializeField] GameObject UiNum1, UiNum2, UiNum3, UiNum4;
     [SerializeField] GameObject UiInput;
     [SerializeField] InputField inputplaye;
+    [SerializeField] GameObject winList;
+    [SerializeField] GameObject loseList;
 
     private void Start()
     {
+        Time.timeScale = 1;
         inputplaye.onEndEdit.AddListener(delegate { Checknumber(inputplaye); });
     }
     void FixedUpdate()
     {
         Ray ray = cameraP.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         int LayerCollect = 1 << 8;
 
         if(Physics.Raycast(ray, out RaycastHit raycastHit, 2, LayerCollect))
@@ -58,31 +61,12 @@ public class map1 : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Mouse0) && raycastHit.collider.tag == "compu")
             {
-                Time.timeScale = 0;
+                //Time.timeScale = 0;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 UiInput.SetActive(true);
             }
         }
-        //pause Menu
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            UiPause.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0;
-        }
-    }
-    public void ResumGame()
-    {
-        UiPause.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1;
-    }
-    public void Exit()
-    {
-        Application.Quit();
     }
     public void LoadMenu(string sceneName)
     {
@@ -92,20 +76,17 @@ public class map1 : MonoBehaviour
     {
         if (input.text == CodeWin)
         {
-            //ßæÏ ÇáÇäÊÕÇÑ åäÇ
+            //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             Debug.Log("win");
+            UiInput.SetActive(false);
+            winList.SetActive(true);
         }
         else if (input.text != CodeWin)
         {
-            //ßæÏ ÇáÎÓÇÑÉ åäÇ
+            //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            UiInput.SetActive(false);
+            loseList.SetActive(true);
             Debug.Log("lose");
         }
-    }
-    public void GetBackToGame()
-    {
-        Time.timeScale = 1;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        UiInput.SetActive(false);
     }
 }

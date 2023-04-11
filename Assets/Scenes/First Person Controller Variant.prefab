@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4057361332642374347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Name
+      value: First Person Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6042283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.58133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091235612652972765, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: cameraP
+      value: 
+      objectReference: {fileID: 4036983829592106587}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiNum1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiNum2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiNum3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiNum4
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiInput
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: UiPause
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: winList
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: loseList
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: resuemBtn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553616446621087426, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: inputplaye
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5033702931378840104, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+    - {fileID: 1091235612652972765, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+    - {fileID: 7699180674004538718, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+--- !u!20 &4036983829592106587 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20437472682476688, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_PrefabInstance: {fileID: 4057361332642374347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4055748454954849089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_PrefabInstance: {fileID: 4057361332642374347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9027543810608793673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055748454954849089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c7d63961af65b43b6eb12ed6c13cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraP: {fileID: 4036983829592106587}
+  UiPause: {fileID: 0}
+  UiNum1: {fileID: 0}
+  UiNum2: {fileID: 0}
+  UiNum3: {fileID: 0}
+  UiNum4: {fileID: 0}
+  UiInput: {fileID: 0}
+  inputplaye: {fileID: 0}
+  winList: {fileID: 0}
+  loseList: {fileID: 0}

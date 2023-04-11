@@ -8,8 +8,6 @@ using UnityEngine.SceneManagement;
 public class RayHitOpen : MonoBehaviour
 {
     [SerializeField] Camera cameraP;
-    [SerializeField] Transform Aims;
-    [SerializeField] LineRenderer lineRenderer;
     [SerializeField] GameObject Door1;
     [SerializeField] Animation anim;
     //Move To next Scene
@@ -19,7 +17,6 @@ public class RayHitOpen : MonoBehaviour
     [SerializeField] GameObject UiToOpen, UiLoadingMap1, UiLoadingMap2, UiLoadingMap3;
     [SerializeField] Slider proMap1, proMap2, proMap3;
     [SerializeField] GameObject UiPause;
-    [SerializeField] Button resuemBtn, mainMenuBtn, exitBtn;
     //The Time Portal
     [SerializeField] GameObject Portal;
     //Maps
@@ -53,8 +50,8 @@ public class RayHitOpen : MonoBehaviour
         Time.timeScale = 1;
 
         UiToOpen.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         if (Portal.activeInHierarchy == false)
         {
             Portal.SetActive(true);
@@ -69,8 +66,8 @@ public class RayHitOpen : MonoBehaviour
         Time.timeScale = 1;
 
         UiToOpen.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         if (Portal.activeInHierarchy == false)
         {
             Portal.SetActive(true);
@@ -85,8 +82,8 @@ public class RayHitOpen : MonoBehaviour
         Time.timeScale = 1;
 
         UiToOpen.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         if (Portal.activeInHierarchy == false)
         {
             Portal.SetActive(true);
@@ -177,9 +174,6 @@ public class RayHitOpen : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 2, layerMaskdoor1))
         {
-            lineRenderer.enabled = true;
-            lineRenderer.SetPosition(0, Aims.transform.position);
-            lineRenderer.SetPosition(1, raycastHit.transform.position);
             if (Input.GetKeyDown(KeyCode.Mouse0) && isAnimDone == false)
             {
                 anim.Play("Default_Open");
@@ -192,9 +186,7 @@ public class RayHitOpen : MonoBehaviour
         else if (Physics.Raycast(ray, out raycastHit, 2, layerSelectScene))
         {
 
-            lineRenderer.enabled = true;
-            lineRenderer.SetPosition(0, Aims.transform.position);
-            lineRenderer.SetPosition(1, raycastHit.transform.position);
+            
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Time.timeScale = 0;
@@ -203,11 +195,6 @@ public class RayHitOpen : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-        }
-        else
-        {
-            lineRenderer.enabled = false;
-            //Debug.Log("no hit");
         }
         //pause Menu
         if (Input.GetKeyDown(KeyCode.Escape))
